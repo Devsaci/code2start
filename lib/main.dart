@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -25,7 +27,7 @@ class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
   @override
-  State<StatefulWidget> createState() => _HomeState();
+  State<Home> createState() => _HomeState();
 }
 
 class _HomeState extends State<Home> {
@@ -46,6 +48,7 @@ class _HomeState extends State<Home> {
               onPressed: () {},
               icon: const Icon(Icons.remove),
             ),
+            Text('$counter'),
             IconButton(
               onPressed: () {},
               icon: const Icon(Icons.add),
