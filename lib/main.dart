@@ -44,7 +44,11 @@ class _HomeState extends State<Home> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                setState(() {
+
+                });
+              },
               icon: const Icon(
                 Icons.remove,
                 size: 50,
@@ -59,7 +63,11 @@ class _HomeState extends State<Home> {
               ),
             ),
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                setState(() {
+
+                });
+              },
               icon: const Icon(
                 Icons.add,
                 size: 50,
