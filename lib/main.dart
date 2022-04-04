@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -43,12 +45,26 @@ class _HomeState extends State<Home> {
           children: [
             IconButton(
               onPressed: () {},
-              icon: const Icon(Icons.remove),
+              icon: const Icon(
+                Icons.remove,
+                size: 50,
+                color: Colors.blue,
+              ),
             ),
-            Text('$counter'),
+            Text(
+              '$counter',
+              style: const TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
             IconButton(
               onPressed: () {},
-              icon: const Icon(Icons.add),
+              icon: const Icon(
+                Icons.add,
+                size: 50,
+                color: Colors.blue,
+              ),
             ),
           ],
         ),
