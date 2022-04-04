@@ -11,11 +11,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Material App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:null,
+      home: Home(),
     );
   }
 }
+
+class Home extends StatefulWidget{
+  @override
+  State<StatefulWidget> createState() => throw UnimplementedError();
+}
+
