@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -30,10 +31,25 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 100,
-      height: 100,
-      color: Colors.yellowAccent,
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("State Management"),
+      ),
+      body: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.remove),
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.add),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
