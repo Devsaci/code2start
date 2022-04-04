@@ -1,7 +1,3 @@
-import 'dart:js';
-import 'dart:ui';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -38,48 +34,52 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return StatefulBuilder(
       builder: (context, StateSetter setState) => Scaffold(
-          appBar: AppBar(
-            title: const Text("State Management"),
-          ),
-          body: Center(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                IconButton(
-                  onPressed: () {
-                    setState(() {
-                      counter--;
-                    });
-                  },
-                  icon: const Icon(
-                    Icons.remove,
-                    size: 50,
-                    color: Colors.blue,
-                  ),
+        appBar: AppBar(
+          title: const Text("State Management"),
+        ),
+        body: Center(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              IconButton(
+                onPressed: () {
+                  setState(() {
+                    counter--;
+                  });
+                },
+                icon: const Icon(
+                  Icons.remove,
+                  size: 50,
+                  color: Colors.blue,
                 ),
-                Text(
-                  '$counter',
-                  style: const TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                  ),
+              ),
+              Text(
+                'Counter is  $counter',
+                style: const TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
                 ),
-                IconButton(
-                  onPressed: () {
-                    setState(() {
-                      counter++;
-                    });
-                  },
-                  icon: const Icon(
-                    Icons.add,
-                    size: 50,
-                    color: Colors.red,
-                  ),
+              ),
+              IconButton(
+                onPressed: () {
+                  setState(() {
+                    counter++;
+                  });
+                },
+                icon: const Icon(
+                  Icons.add,
+                  size: 50,
+                  color: Colors.red,
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
+      ),
     );
+  }
+
+  Widget? myCounter() {
+    return null;
   }
 }
