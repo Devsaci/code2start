@@ -32,54 +32,57 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return StatefulBuilder(
-      builder: (context, StateSetter setState) => Scaffold(
+    return  Scaffold(
         appBar: AppBar(
           title: const Text("State Management"),
         ),
         body: Center(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              IconButton(
-                onPressed: () {
-                  setState(() {
-                    counter--;
-                  });
-                },
-                icon: const Icon(
-                  Icons.remove,
-                  size: 50,
-                  color: Colors.blue,
-                ),
-              ),
-              Text(
-                'Counter is  $counter',
-                style: const TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              IconButton(
-                onPressed: () {
-                  setState(() {
-                    counter++;
-                  });
-                },
-                icon: const Icon(
-                  Icons.add,
-                  size: 50,
-                  color: Colors.red,
-                ),
-              ),
-            ],
-          ),
+          child: myCounter(context),
         ),
-      ),
-    );
+      );
+
   }
 
-  Widget? myCounter() {
-    return null;
+  Widget? myCounter(BuildContext context) {
+    return StatefulBuilder(
+      builder: (context, StateSetter setState) {
+        return Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            IconButton(
+              onPressed: () {
+                setState(() {
+                  counter--;
+                });
+              },
+              icon: const Icon(
+                Icons.remove,
+                size: 50,
+                color: Colors.blue,
+              ),
+            ),
+            Text(
+              'myCounter  $counter',
+              style: const TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            IconButton(
+              onPressed: () {
+                setState(() {
+                  counter++;
+                });
+              },
+              icon: const Icon(
+                Icons.add,
+                size: 50,
+                color: Colors.red,
+              ),
+            ),
+          ],
+        );
+      },
+    );
   }
 }
