@@ -25,4 +25,10 @@ class Home extends StatefulWidget {
   State<StatefulWidget> createState() => throw UnimplementedError();
 }
 
-class _HomeState {}
+class _HomeState extends State<Home> {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    throw UnimplementedError();
+  }
+}
