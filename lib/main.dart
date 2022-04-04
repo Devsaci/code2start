@@ -1,3 +1,4 @@
+import 'dart:js';
 import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
@@ -23,60 +24,64 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+// class Home extends StatefulWidget {
+//   const Home({Key? key}) : super(key: key);
+//
+//   @override
+//   _HomeState createState() => _HomeState();
+// }
 
-  @override
-  _HomeState createState() => _HomeState();
-}
-
-class _HomeState extends State<Home> {
+class Home extends StatelessWidget {
   int counter = 0;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("State Management"),
-      ),
-      body: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            IconButton(
-              onPressed: () {
-                setState(() {
-
-                });
-              },
-              icon: const Icon(
-                Icons.remove,
-                size: 50,
-                color: Colors.blue,
-              ),
+    return StatefulBuilder(
+      builder: (context, StateSetter setState) {
+        return Scaffold(
+          appBar: AppBar(
+            title: const Text("State Management"),
+          ),
+          body: Center(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                IconButton(
+                  onPressed: () {
+                    setState(() {
+                      counter--;
+                    });
+                  },
+                  icon: const Icon(
+                    Icons.remove,
+                    size: 50,
+                    color: Colors.blue,
+                  ),
+                ),
+                Text(
+                  '$counter',
+                  style: const TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                IconButton(
+                  onPressed: () {
+                    setState(() {
+                      counter++;
+                    });
+                  },
+                  icon: const Icon(
+                    Icons.add,
+                    size: 50,
+                    color: Colors.red,
+                  ),
+                ),
+              ],
             ),
-            Text(
-              '$counter',
-              style: const TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            IconButton(
-              onPressed: () {
-                setState(() {
-
-                });
-              },
-              icon: const Icon(
-                Icons.add,
-                size: 50,
-                color: Colors.blue,
-              ),
-            ),
-          ],
-        ),
-      ),
+          ),
+        );
+      },
     );
   }
 }
