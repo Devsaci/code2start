@@ -37,8 +37,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StatefulBuilder(
-      builder: (context, StateSetter setState) {
-        return Scaffold(
+      builder: (context, StateSetter setState) => Scaffold(
           appBar: AppBar(
             title: const Text("State Management"),
           ),
@@ -80,8 +79,7 @@ class Home extends StatelessWidget {
               ],
             ),
           ),
-        );
-      },
+        ),
     );
   }
 }
