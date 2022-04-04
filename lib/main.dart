@@ -20,8 +20,9 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class Home extends StatefulWidget{
+class Home extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => throw UnimplementedError();
 }
 
+class _HomeState {}
