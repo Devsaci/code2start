@@ -20,27 +20,19 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// class Home extends StatefulWidget {
-//   const Home({Key? key}) : super(key: key);
-//
-//   @override
-//   _HomeState createState() => _HomeState();
-// }
-
 class Home extends StatelessWidget {
   int counter = 0;
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-        appBar: AppBar(
-          title: const Text("State Management"),
-        ),
-        body: Center(
-          child: myCounter(context),
-        ),
-      );
-
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("State Management"),
+      ),
+      body: Center(
+        child: myCounter(context),
+      ),
+    );
   }
 
   Widget? myCounter(BuildContext context) {
